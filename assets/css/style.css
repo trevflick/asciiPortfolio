@@ -22,12 +22,15 @@ body {
   }
   
   pre, code, .terminal-content {
-    max-width: 600px;
-    margin: auto;
+    
+    margin: 0;
     font-size: 1rem;
+    text-align: left;
     line-height: 1.6;
     font-family: 'Alpha Lyrae', monospace !important;
-    content:center;
+    content: center;
+    max-width: 100%;
+
 
   }
   
@@ -41,11 +44,12 @@ body {
     display: inline-block;
     position: relative;
     font-family: 'Alpha Lyrae', monospace;
+    
   }
   
   .ascii-top,
   .ascii-bottom {
-    text-align: center;
+    text-align: left;
     margin: 0;
   }
   
@@ -56,7 +60,19 @@ body {
   
   
   .terminal-content {
-    padding: 1rem;
+    padding: 0;
     border: none;
   }
+
+  .ascii-guy {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2;
+    margin: 1rem auto;
+    white-space: pre;
+  }
   
+  .email-me {
+    text-decoration: underline;
+    cursor: pointer;
+  }

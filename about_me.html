@@ -5,40 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>about_me.txt</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+    <div class="ascii-container">
+    <pre class="ascii-guy"></pre>
+    </div>
+    
 <pre>
 $ cat about_me.txt
 
+hi, i'm trevor!
 
+i'm a developer interested in creating digital experiences reminiscent of an earlier time on the internet.
+this is my digital profile/portfolio. it contains projects i've made as well as media i've been enjoying lately and wanted to share. 
 
+a gamified version of my site can be found <a href="https://trevorflick.com" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a> which i built using phaser.
 
+if you are curious about anything on this site, feel free to send me a <span class="email-me">message</span>!
 
 $ Type 'cd' to go back
 </pre>
 
 <div class="terminal-input">
-  <span>$ </span><input type="text" id="terminalInput" autocomplete="off" autofocus>
-</div>
+    <span>$ </span><input type="text" id="terminalInput" autocomplete="off" autofocus>
+  </div>
 
-<script>
-const input = document.getElementById('terminalInput');
 
-input.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') {
-    const command = input.value.trim();
-    if (command === 'cd') {
-      window.location.href = 'index.html';
-    } else {
-      alert('command not found: ' + command);
-      input.value = '';
-    }
-  }
-});
-</script>
+
+
+<script src="assets/js/script.js"></script>
+
+
 
 <style>
+pre {
+  text-align: left;
+}
+
+.ascii-guy {
+  display: inline-block;
+  text-align: left;
+  line-height: 1.2;
+  margin: 1rem auto;
+  white-space: pre;
+}
+
+
 .terminal-input {
   font-family: 'Alpha Lyrae', monospace;
   margin-top: 1rem;
