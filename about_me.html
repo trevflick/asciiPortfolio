@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>about_me.txt</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<pre>
+$ cat about_me.txt
+
+
+
+
+
+$ Type 'cd' to go back
+</pre>
+
+<div class="terminal-input">
+  <span>$ </span><input type="text" id="terminalInput" autocomplete="off" autofocus>
+</div>
+
+<script>
+const input = document.getElementById('terminalInput');
+
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const command = input.value.trim();
+    if (command === 'cd') {
+      window.location.href = 'index.html';
+    } else {
+      alert('command not found: ' + command);
+      input.value = '';
+    }
+  }
+});
+</script>
+
+<style>
+.terminal-input {
+  font-family: 'Alpha Lyrae', monospace;
+  margin-top: 1rem;
+}
+
+input {
+  background: none;
+  border: none;
+  color: black;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  width: 50%;
+}
+</style>
+
+</body>
+</html>

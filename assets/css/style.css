@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Alpha Lyrae';
+  src: url('../fonts/AlphaLyrae.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Alpha Lyrae', monospace;
+    margin: 2rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  pre, code, .terminal-content {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: 'Alpha Lyrae', monospace !important;
+    content:center;
+
+  }
+  
+  .ascii-gif img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 2rem;
+  }
+  
+  .ascii-container {
+    display: inline-block;
+    position: relative;
+    font-family: 'Alpha Lyrae', monospace;
+  }
+  
+  .ascii-top,
+  .ascii-bottom {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .ascii-middle {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  
+  .terminal-content {
+    padding: 1rem;
+    border: none;
+  }
+  
