@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>about_me.txt</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div class="ascii-container">
+        <pre class="ascii-diamond"></pre>
+    </div>
+    
+    <div class="terminal-output">
+        <p>$ cat ascii_room</p>
+        <a href="ascii_room_about.html">about.txt</a>
+      
+        <h3>ascii gallery:</h3>
+      
+        <div class="ascii-gallery">
+          <div class="ascii-piece">
+            <img src="assets/media/asciiGifs/april14.gif" alt="ascii art">
+            <p>waves_april14.gif</p>
+          </div>
+      
+          <div class="ascii-piece">
+            <img src="assets/media/asciiGifs/april7.gif" alt="ascii art">
+            <p>april13.gif</p>
+          </div>
+      
+          <div class="ascii-piece">
+            <img src="assets/media/asciiGifs/march30.gif" alt="ascii art">
+            <p>april12.gif</p>
+          </div>
+        </div>
+      
+        <p>$ Type 'cd' to go back</p>
+      </div>
+      
+
+<div class="terminal-input">
+    <span>$ </span><input type="text" id="terminalInput" autocomplete="off" autofocus>
+  </div>
+
+
+
+
+<script src="assets/js/script.js"></script>
+
+
+
+<style>
+pre {
+  text-align: left;
+}
+
+.ascii-guy {
+  display: inline-block;
+  text-align: left;
+  line-height: 1.2;
+  margin: 1rem auto;
+  white-space: pre;
+}
+
+
+.terminal-input {
+  font-family: 'Alpha Lyrae', monospace;
+  margin-top: 1rem;
+}
+
+input {
+  background: none;
+  border: none;
+  color: black;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  width: 50%;
+}
+
+.ascii-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.ascii-piece {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ascii-piece img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid black;
+}
+
+.ascii-piece p {
+  margin-top: 0.5rem;
+  font-family: 'Alpha Lyrae', monospace;
+  font-size: 0.9rem;
+}
+
+
+</style>
+
+</body>
+</html>

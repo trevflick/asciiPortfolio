@@ -62,12 +62,20 @@ const waveHeart = [
   `<3`
   ];
 
+const waveDiamond = [
+  `<*>`,
+  
+  `^.v `,
+  
+  `<*>`
+  ];  
+
 setInterval(() => {
   const asciiTop = document.querySelector('.ascii-top');
   const asciiBottom = document.querySelector('.ascii-bottom');
   const asciiGuy = document.querySelector('.ascii-guy');
   const asciiHeart = document.querySelector('.ascii-heart');
-
+  const asciiDiamond = document.querySelector('.ascii-diamond');
 
   if (asciiTop) {
     asciiTop.innerText = symbols[index % symbols.length];
@@ -81,6 +89,9 @@ setInterval(() => {
   if (asciiHeart) {
     asciiHeart.innerText = waveHeart[index % waveHeart.length];
   }
+  if (asciiDiamond) {
+    asciiDiamond.innerText = waveDiamond[index % waveDiamond.length];
+  }
 
   index++;
 }, 200);
@@ -93,17 +104,23 @@ const input = document.getElementById('terminalInput');
 if (input && (window.location.pathname.includes('index.html') || window.location.pathname.includes('about_me.html') || window.location.pathname === '/')) {
   input.focus();
 }
-
 if (input) {
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       const command = input.value.trim();
+      
       if (command === 'cd') {
-        window.location.href = 'index.html';
+        // check if current page is ascii_room_about.html
+        if (window.location.pathname.includes('ascii_room_about')) {
+          window.location.href = 'ascii_room.html';
+        } else {
+          window.location.href = 'index.html';
+        }
       } else {
         alert('command not found: ' + command);
-        input.value = '';
       }
+      
+      input.value = '';
     }
   });
 }
