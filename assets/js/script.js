@@ -16,7 +16,7 @@ function updateSelection() {
 updateSelection();
 
 
-// Only activate arrow key navigation on index.html or projects.html
+// Only activate arrow key navigation on index.html or projects.html OR things_i_like.html
 document.addEventListener('keydown', (e) => {
   const activeElement = document.activeElement;
   const isTyping = activeElement && activeElement.tagName === 'INPUT';
@@ -24,6 +24,7 @@ document.addEventListener('keydown', (e) => {
   if (
     (window.location.pathname.includes('index.html') ||
     window.location.pathname.includes('projects.html') ||
+    window.location.pathname.includes('things_i_like.html') ||
     window.location.pathname === '/') &&
     !isTyping
   ) {
